@@ -28,7 +28,6 @@ organization external(
     )
     location ('loading.txt')
 );
-
 insert into EVENT_TYPE select * from EVENT_TYPE_LOAD;
 drop table EVENT_TYPE_LOAD;
 
@@ -38,3 +37,7 @@ update EVENT_TYPE set name = 'update one' where name = 'event_type2';
 
 ----------
 delete from EVENT_TYPE where id = 3;
+
+delete from EVENT_TYPE where id > 3;
+
+truncate table EVENT_TYPE;
